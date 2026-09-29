@@ -1,0 +1,61 @@
+{
+  "_comment": "Reproduced metadata for the four anonymized Amazon Sports rows in the submitted paper's failure-oriented case study. anonymous_item_id is a stable repository identifier, not an original product identifier or ASIN; no unreported identity is invented.",
+  "cases": [
+    {
+      "anonymous_item_id": "sports-case1-youth-beginner",
+      "case": "Case 1: surface ambiguity",
+      "item_label": "Youth / beginner ball",
+      "title": "Classic Soccer Ball, Size 4, Blue/Yellow",
+      "surface_text": "soccer ball, size 4, training, durable",
+      "visual_evidence": "Bright blue/yellow color; youth-oriented appearance; soft rubber texture; backyard or school-field scene.",
+      "text_only_failure": "text-only SID may place it near generic training or match balls.",
+      "descriptor": "parent-purchased youth beginner soccer practice; school/recreational play.",
+      "qarm_label": 1,
+      "confidence": 0.89,
+      "text_only_sid": ["a1", "b33", "c192"],
+      "full_sid": ["a1", "b08", "c144"]
+    },
+    {
+      "anonymous_item_id": "sports-case1-adult-match",
+      "case": "Case 1: surface ambiguity",
+      "item_label": "Adult / match ball",
+      "title": "Classic Soccer Ball, Size 5, White/Black",
+      "surface_text": "soccer ball, size 5, training, durable",
+      "visual_evidence": "Standard match-ball texture; stitched panels; grass/turf field; full-size goal and club-practice cues.",
+      "text_only_failure": "surface text remains close to the youth ball, but usage intent differs.",
+      "descriptor": "competitive outdoor soccer training; adult club practice; match preparation.",
+      "qarm_label": 1,
+      "confidence": 0.86,
+      "text_only_sid": ["a1", "b33", "c197"],
+      "full_sid": ["a1", "b61", "c209"]
+    },
+    {
+      "anonymous_item_id": "sports-case2-indoor-futsal",
+      "case": "Case 2: evidence omission",
+      "item_label": "Indoor futsal ball",
+      "title": "Soccer Training Ball, Size 4",
+      "surface_text": "soccer training ball, size 4",
+      "visual_evidence": "Indoor court/gym-floor setting; compact size; futsal-style use; low-bounce or hard-court control cues.",
+      "text_only_failure": "short title can collapse into ordinary soccer training balls.",
+      "descriptor": "indoor futsal low-bounce control training; small-sided court play.",
+      "qarm_label": 1,
+      "confidence": 0.91,
+      "text_only_sid": ["a1", "b42", "c083"],
+      "full_sid": ["a1", "b74", "c031"]
+    },
+    {
+      "anonymous_item_id": "sports-case2-outdoor-training",
+      "case": "Case 2: evidence omission",
+      "item_label": "Outdoor training ball",
+      "title": "Soccer Training Ball, Size 5",
+      "surface_text": "soccer training ball, size 5",
+      "visual_evidence": "Grass/turf field; outdoor durability cues; water-resistant usage; team practice and full-size field context.",
+      "text_only_failure": "surface text is close to the indoor futsal item, but context indicates outdoor match training.",
+      "descriptor": "outdoor field soccer practice; team drills; grass/turf match training.",
+      "qarm_label": 1,
+      "confidence": 0.88,
+      "text_only_sid": ["a1", "b42", "c091"],
+      "full_sid": ["a1", "b27", "c186"]
+    }
+  ]
+}

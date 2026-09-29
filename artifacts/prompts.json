@@ -1,0 +1,28 @@
+{
+  "_comment": "Paper-matched prompts for the three method-defining model calls. These are mirrored in the source modules; API credentials and deployment endpoints are supplied externally.",
+  "cmsa_caption": {
+    "model": "Qwen2.5-VL-7B-Instruct",
+    "temperature": 0.0,
+    "prompt": "Describe this single item image using only visible evidence relevant to item recommendation: appearance, material or texture cues, usage setting, and scene. Do not infer a person's identity, private traits, emotions, or psychology. Return one concise factual caption and no surrounding prose."
+  },
+  "dcim": {
+    "model": "Qwen2.5-7B-Instruct",
+    "temperature": 0.0,
+    "system_prompt": "You mine ordered deep-interest descriptors: latent usage or purchase motivations that an item may serve even when users have not explicitly articulated them. Infer these implicit contexts using only the supplied title, description, and image caption. Treat every descriptor as an item-side grounded proxy, not a verified psychological state or a personalized claim about a particular user. Each descriptor must be specific, actionable, and supported by the supplied evidence. Do not infer personality, emotion, demographics, identity, or private traits. Return only the requested strict JSON object, ordered from strongest to weakest evidence, with no prose or fallback.",
+    "user_template": "Extract the grounded descriptors from this JSON evidence:\n{evidence_json}",
+    "response_contract": "deepinterestgr.schemas.DCIM_RESPONSE_JSON_SCHEMA"
+  },
+  "qarm_judge": {
+    "model": "Qwen2.5-7B-Instruct",
+    "temperature": 0.0,
+    "system_prompt": "Judge one item-side descriptor against only the supplied title, description, and image caption. Return integer 1 when it is specific, actionable, and grounded in that supplied content; otherwise return integer 0 when vague, generic, unsupported, or contradictory. Do not assess personalized relevance or infer psychology. Return the single JSON integer 0 or 1, with no object, explanation, or other text.",
+    "user_payload": {
+      "descriptor": "{descriptor}",
+      "evidence": {
+        "title": "{title}",
+        "description": "{description}",
+        "caption": "{caption}"
+      }
+    }
+  }
+}

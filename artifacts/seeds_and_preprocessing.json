@@ -1,0 +1,48 @@
+{
+  "_comment": "Seeds and preprocessing protocol used for the reported experiments.",
+  "seeds": {
+    "qarm_control": {
+      "number_of_runs": 3,
+      "values_by_reported_label": {
+        "Seed 1": 42,
+        "Seed 2": 2333,
+        "Seed 3": 6666
+      }
+    }
+  },
+  "preprocessing": {
+    "source": "Amazon Product Reviews",
+    "primary_categories": [
+      "Beauty",
+      "Sports and Outdoors",
+      "Musical Instruments"
+    ],
+    "additional_category_checks": [
+      "Industrial and Scientific",
+      "Toys and Games"
+    ],
+    "interaction_filter": "iterative 5-core",
+    "evaluation_split": {
+      "ordering": "chronological within each user",
+      "train": "all interactions except the final two",
+      "validation": "penultimate interaction",
+      "test": "final interaction"
+    },
+    "image_policy": "filter items without a usable main image",
+    "item_evidence_order": [
+      "title",
+      "description",
+      "CMSA visual caption",
+      "ordered DCIM descriptors"
+    ],
+    "offline_item_steps": [
+      "caption at most one main image with CMSA",
+      "extract ordered descriptors and confidences with DCIM",
+      "embed enriched item text with Qwen3-Embedding-4B",
+      "encode the image with frozen CLIP ViT-L/14",
+      "fuse text and visual vectors before RQ-VAE quantization",
+      "assign three hierarchical RQ codes and an optional collision suffix",
+      "obtain one binary QARM label per descriptor before policy training"
+    ]
+  }
+}

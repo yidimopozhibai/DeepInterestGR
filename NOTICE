@@ -1,0 +1,3 @@
+This distribution includes a reference integration point for the OpenAI CLIP model identifier "openai/clip-vit-large-patch14". CLIP is an externally developed work and remains subject to its own applicable license and notices.
+
+This distribution also exposes optional interoperability with OpenAI-compatible APIs and optional loading through third-party Python libraries. Those external services, models, and libraries are not included in this distribution and remain subject to their respective terms and notices.

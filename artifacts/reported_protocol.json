@@ -1,0 +1,52 @@
+{
+  "_comment": "Compact transcription of settings explicitly reported in the submitted paper. This file intentionally does not guess unpublished LoRA details, reward coefficients, seeds, dimensions, or legacy-script defaults.",
+  "data": {
+    "primary_categories": [
+      "Beauty",
+      "Sports and Outdoors",
+      "Musical Instruments"
+    ],
+    "additional_category_checks": [
+      "Industrial and Scientific",
+      "Toys and Games"
+    ],
+    "filtering": "5-core",
+    "evaluation_split": "leave-last-out",
+    "metrics": ["HR@5", "HR@10", "NDCG@5", "NDCG@10"],
+    "beam_size": 20
+  },
+  "models": {
+    "cmsa_caption": "Qwen2.5-VL-7B-Instruct",
+    "dcim": "Qwen2.5-7B-Instruct",
+    "qarm_judge": "Qwen2.5-7B-Instruct",
+    "generative_backbone": "Qwen2.5-7B-Instruct",
+    "continuous_vision": "openai/clip-vit-large-patch14",
+    "text_embedding": "Qwen3-Embedding-4B"
+  },
+  "cmsa": {
+    "main_images_per_item_max": 1,
+    "vision_encoder_frozen": true
+  },
+  "sid": {
+    "rq_levels": 3,
+    "collision_suffix": "unique disambiguation token when all three RQ codes collide",
+    "collision_suffix_in_lcp": false
+  },
+  "sft": {
+    "adaptation": "LoRA",
+    "learning_rate": 0.0003,
+    "epochs": 3
+  },
+  "grpo": {
+    "adaptation": "LoRA",
+    "learning_rate": 0.00001,
+    "epochs": 2,
+    "kl_coefficient": 0.001,
+    "group_size": 8,
+    "advantage_epsilon": 0.000001
+  },
+  "qarm": {
+    "quality_alpha": 0.5
+  },
+  "hardware": "NVIDIA A100 80GB"
+}
