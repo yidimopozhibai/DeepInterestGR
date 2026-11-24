@@ -44,3 +44,8 @@ API credentials, endpoints, deployment names, and unpublished integration values
 ## Anonymity note
 
 To comply with DASFAA2027 double-blind review, this package does not link to access-tracked cloud storage or redistribute files whose metadata may reveal author identity. Large data and training artifacts can be released after the anonymous review period.
+
+## Supplementary appendix
+
+Appendices **A**–**E** (QARM advantage audit, quality-label validation, controlled surface-only comparison, resource profile, CMSA dual-path
+analysis) are provided as [`appendix.pdf`](appendix.pdf).
