@@ -43,4 +43,4 @@ API credentials, endpoints, deployment names, and unpublished integration values
 
 ## Anonymity note
 
-To comply with ICLR double-blind review, this package does not link to access-tracked cloud storage or redistribute files whose metadata may reveal author identity. Large data and training artifacts can be released after the anonymous review period.
+To comply with DASFAA2027 double-blind review, this package does not link to access-tracked cloud storage or redistribute files whose metadata may reveal author identity. Large data and training artifacts can be released after the anonymous review period.
