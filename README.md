@@ -48,4 +48,4 @@ To comply with DASFAA2027 double-blind review, this package does not link to acc
 ## Supplementary appendix
 
 Appendices **A**–**E** (QARM advantage audit, quality-label validation, controlled surface-only comparison, resource profile, CMSA dual-path
-analysis) are provided as [`appendix.pdf`](appendix.pdf).
+analysis) are provided as [`appendix.pdf`](supp_lncs.pdf).
